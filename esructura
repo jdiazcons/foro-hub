@@ -1,0 +1,27 @@
+src/
+└── main/
+    ├── java/
+    │   └── com/
+    │       └── foro/
+    │           ├── ForoApplication.java
+    │           ├── config/          # Configuración de seguridad y JWT
+    │           │   ├── JwtFilter.java
+    │           │   ├── SecurityConfig.java
+    │           │   └── JwtUtils.java
+    │           ├── controller/      # Controladores REST
+    │           │   └── TopicoController.java
+    │           ├── model/           # Entidades del modelo
+    │           │   ├── Topico.java
+    │           │   ├── Usuario.java
+    │           │   └── Respuesta.java
+    │           ├── repository/      # Repositorios JPA
+    │           │   ├── TopicoRepository.java
+    │           │   ├── UsuarioRepository.java
+    │           │   └── RespuestaRepository.java
+    │           ├── service/         # Servicios (lógica de negocio)
+    │           │   ├── AuthService.java
+    │           │   └── TopicoService.java
+    └── resources/
+        ├── application.properties   # Configuración de la base de datos y seguridad
+        ├── data.sql                 # (Opcional) Datos iniciales para la BD
+        └── schema.sql               # (Opcional) Esquema inicial de la BD
