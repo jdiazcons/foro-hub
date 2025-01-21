@@ -1,52 +1,46 @@
 # foro-hub
-1. Configuración del Proyecto
-Pasos:
-Crear el proyecto:
+//1. Configuración del Proyecto
+//Pasos:
+//Crear el proyecto:
 
-Utiliza Spring Initializr para generar un proyecto con las siguientes dependencias:
-Spring Web (para construir la API REST).
-Spring Data JPA (para la interacción con la base de datos).
-Spring Security (para autenticación y autorización).
-MySQL Driver (para conectarse a MySQL).
-Validation (para validar datos de entrada).
-Configurar el proyecto:
+//Se utiliza Spring Initializr para generar un proyecto con las siguientes dependencias:
+//Spring Web (para construir la API REST).
+//Spring Data JPA (para la interacción con la base de datos).
+//Spring Security (para autenticación y autorización).
+//MySQL Driver (para conectarse a MySQL).
+//Validation (para validar datos de entrada).
+//Configurar el proyecto:
 
-Abre el proyecto en tu IDE.
-Asegúrate de que las dependencias se descarguen correctamente.
+Se abre el proyecto en tu IDE.
+Se asegura de que las dependencias se descarguen correctamente.
 2. Configuración de la Base de Datos
 Pasos:
 Configurar application.properties:
 
-Abre el archivo src/main/resources/application.properties y configura la conexión a MySQL:
+Se abre el archivo src/main/resources/application.properties y se configura la conexión a MySQL:
 
-properties
-Copiar
-Editar
+
 spring.datasource.url=jdbc:mysql://localhost:3306/foro_db
 spring.datasource.username=tu_usuario
 spring.datasource.password=tu_contraseña
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
-Asegúrate de que el usuario y la base de datos (foro_db) existan en tu servidor MySQL.
 
-Crear la base de datos en MySQL:
+Se asegura  de que el usuario y la base de datos (foro_db) existan en tu servidor MySQL.
 
-Ejecuta en tu cliente MySQL:
+Se crea la base de datos en MySQL:
 
-sql
-Copiar
-Editar
+Se ejecuta cliente MySQL:
+
 CREATE DATABASE foro_db;
+
 3. Diseño de las Entidades
 Vamos a crear las entidades necesarias para manejar tópicos, usuarios y respuestas, estableciendo relaciones entre ellas.
 
 Entidades:
 Usuario: Representa a los participantes del foro.
 
-java
-Copiar
-Editar
 @Entity
 public class Usuario {
     @Id
